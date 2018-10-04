@@ -11,24 +11,16 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('admin.login');
-// });
-
-// Route::get('/register', function () {
-//     return view('admin.register');
-// });
-Route::get('/', function () {
-    return view('auth.login');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', 'AdminController@index');     
+    
+    
 });
 
-// Route::get('/login', function () {
-//     return view('login');
-// });
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 

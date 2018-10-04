@@ -14,7 +14,7 @@
                         <span class="db"><img src="{{ asset('images/logo.png') }}" alt="logo" /></span>
                     </div>
                     <!-- Form -->
-                    <form class="form-horizontal m-t-20" id="loginform" action="index.html">
+                    <form class="form-horizontal m-t-20" id="loginform" action="{{ route('login') }}" method="POST">
 
                     @csrf
 
