@@ -11,10 +11,24 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('admin.login');
+// });
+
+// Route::get('/register', function () {
+//     return view('admin.register');
+// });
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
+
+// Route::get('/login', function () {
+//     return view('login');
+// });
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
